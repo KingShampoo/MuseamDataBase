@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DB69401C-9308-4AF5-DBF8-DFA4114D6771" name="Appraiser">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:25:13 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="AppraiserName" id="55A6F607-0EB4-34D2-BB54-AED7D9F60A17">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:25:19 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>A4121B86-B0E0-962F-822F-66FB8995C4E0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AppraiserPhone" id="4797F20F-3588-8FF2-BD38-DBD220150600">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:25:38 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>636522CF-202E-099B-D6A7-2F9676A6D93C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="AppraiserSpecialty" id="99375F32-C51E-6BCF-63F2-B44FADAF2B30">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:25:47 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>B7CE7DF1-CD99-044A-44CB-14B21FFCAD4F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

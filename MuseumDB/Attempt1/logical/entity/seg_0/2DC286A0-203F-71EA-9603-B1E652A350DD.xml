@@ -1,0 +1,149 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2DC286A0-203F-71EA-9603-B1E652A350DD" name="Item">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:21:44 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="ItemComments" id="FC0AFA90-2FC2-BA63-6FD4-335A2A96A68E">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:21:51 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>C4DF608B-D3BB-40CE-F42F-606FED2B9CCB</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemCondition" id="7CE23A35-A959-C878-6C95-918F5D0C5423">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:22:08 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>338298F2-A877-B1E9-9192-C82CFA2FFCF0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemDimensions" id="D76A15E8-6C83-CE4F-89D6-843BFA69535A">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:22:17 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>AB288354-D179-3E64-9091-CD5159E200AD</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemDonatedby" id="F56F15FF-7183-7023-6120-1CA6A6B64407">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:22:27 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>FD81D921-007E-AB60-5A24-771366EFF6AF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemID" id="A526E54A-B7C0-54C3-C621-F012A8DBD336">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:22:39 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>40C99328-452B-ADD7-4A8B-19460CB360CF</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemLocation" id="0081BAAB-C6A7-31D5-E1B0-37B3A21ED3A1">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:22:48 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>6C1A7949-1238-BC91-4785-ECD2450371CA</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemName" id="06B191E3-6979-7E48-F581-AEF7B8EDE55A">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:22:59 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>197E8F12-9020-730C-D226-C259446A9308</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemRegistaredBy" id="983A67C7-2856-6142-6DEF-AFA0052FD10E">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:23:09 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>513CA316-AC26-EB60-B98B-12C50639BF3D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemTimePeriod" id="903C20E8-72DC-DFB3-DD05-91942A039AEA">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:23:23 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>31191458-580E-371A-424E-E159809BFA84</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ItemValue" id="24FF64D2-4FD4-F927-1409-BFC004A322E3">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:23:35 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>665332E8-B5A9-C50F-D318-FBD37A85217D</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>

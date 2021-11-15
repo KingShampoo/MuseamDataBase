@@ -1,0 +1,58 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6448240E-6034-4F63-25C1-C953DC286EAD" name="Museum">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:19:47 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="MuseumAdress" id="28971BDA-4B17-E08E-79D3-887F7874B403">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:19:52 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>D15582B5-85EF-C301-CBFB-4C4B087BE780</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MuseumName" id="6C787739-3B74-01F6-7B30-9B519478A2BC">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:20:06 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>94515F95-8E3E-41A5-3ABF-F61A6050671E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="MuseumPhone" id="F35AD0C3-DFFB-677D-83D7-13A304370CDA">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-15 23:20:14 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<domain>9D674DEE-262A-465B-0468-5AAEF6F11A6E</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+</Entity>
