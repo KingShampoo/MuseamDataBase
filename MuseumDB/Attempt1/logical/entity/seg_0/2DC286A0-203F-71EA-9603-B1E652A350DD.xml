@@ -145,5 +145,18 @@
 <domain>665332E8-B5A9-C50F-D318-FBD37A85217D</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ItemPicture" id="795A0909-E8B9-7DBF-FFFE-7F6656B6F8AB">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-18 23:01:57 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LogDes-4972B6D2-6F93-8AE5-6E24-3599E65A7CFE@LOGDT10006</logicalDatatype>
+<domain>9562D805-76A1-9D8B-579B-9CF540B545E8</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>

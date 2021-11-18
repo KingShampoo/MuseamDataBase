@@ -54,5 +54,18 @@
 <domain>9D674DEE-262A-465B-0468-5AAEF6F11A6E</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="MuseumPicture" id="6A31D5E4-7EAC-0CA2-6562-A0F73A394BCE">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-18 23:01:43 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LogDes-4972B6D2-6F93-8AE5-6E24-3599E65A7CFE@LOGDT10006</logicalDatatype>
+<domain>7E93915A-8503-9DAE-E5CD-B0E0E0870F0F</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>
