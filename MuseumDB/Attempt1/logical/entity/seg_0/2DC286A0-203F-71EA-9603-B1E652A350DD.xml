@@ -158,5 +158,18 @@
 <domain>9562D805-76A1-9D8B-579B-9CF540B545E8</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="ItemSequence" id="ED22173C-B1DD-7CEB-DD0B-7FBCF6BA3797">
+<createdBy>sam</createdBy>
+<createdTime>2021-11-19 21:33:53 UTC</createdTime>
+<ownerDesignName>Attempt1</ownerDesignName>
+<engineerTo>
+<item key="DE4174CD-93B6-7408-94FD-D31B62ABFC3C" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<domain>D728BA97-8F9A-697F-783F-23A1392B4DF0</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 </Entity>
