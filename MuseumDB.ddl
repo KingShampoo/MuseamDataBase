@@ -9,157 +9,158 @@
 
 -- predefined type, no DDL - XMLTYPE
 
-CREATE TABLE appraiser (
-    appraisername      VARCHAR2(25),
-    appraiserphone     VARCHAR2(15),
-    appraiserspecialty VARCHAR2(25),
-    appraiser_id       NUMBER NOT NULL,
-    museum_museum_id   NUMBER NOT NULL
+CREATE TABLE Appraiser (
+    AName      VARCHAR2(25),
+    APhone     VARCHAR2(15),
+    ASpecialty VARCHAR2(25),
+    A_id       NUMBER NOT NULL,
+    M_id       NUMBER NOT NULL
 );
 
-ALTER TABLE appraiser ADD CONSTRAINT appraiser_pk PRIMARY KEY ( appraiser_id );
+ALTER TABLE Appraiser ADD CONSTRAINT Appraiser_pk PRIMARY KEY ( A_id );
 
-CREATE TABLE donator (
-    donatorname      VARCHAR2(25),
-    dontorphone      VARCHAR2(15),
-    donatoradress    VARCHAR2(40),
-    donator_id       NUMBER NOT NULL,
-    museum_museum_id NUMBER NOT NULL
+CREATE TABLE Donator (
+    DName            VARCHAR2(25),
+    DPhone           VARCHAR2(15),
+    DAdress          VARCHAR2(40),
+    D_id             NUMBER NOT NULL,
+    M_id             NUMBER NOT NULL
 );
 
-ALTER TABLE donator ADD CONSTRAINT donator_pk PRIMARY KEY ( donator_id );
+ALTER TABLE Donator ADD CONSTRAINT Donator_pk PRIMARY KEY ( D_id );
 
-CREATE TABLE employee (
-    employeeadress    VARCHAR2(40),
-    employeename      VARCHAR2(25),
-    employeephone     VARCHAR2(15),
-    employeespecialty VARCHAR2(20),
-    museum_museum_id  NUMBER NOT NULL
+CREATE TABLE Employee (
+    EAdress           VARCHAR2(40),
+    EName             VARCHAR2(25),
+    EPhone            VARCHAR2(15),
+    ESpecialty        VARCHAR2(20),
+    M_id              NUMBER NOT NULL
 );
 
-CREATE TABLE exhibit (
-    exhibitstartdate VARCHAR2(11),
-    exhibitenddate1  VARCHAR2(15),
-    exhibitname      VARCHAR2(25),
-    exhibitlocation  VARCHAR2(25),
-    exhibit_id       NUMBER NOT NULL,
-    museum_museum_id NUMBER NOT NULL
+CREATE TABLE Exhibit (
+    XStart           VARCHAR2(11),
+    XEnd             VARCHAR2(15),
+    XName            VARCHAR2(25),
+    XLocation        VARCHAR2(25),
+    X_id             NUMBER NOT NULL,
+    M_id             NUMBER NOT NULL
 );
 
-ALTER TABLE exhibit ADD CONSTRAINT exhibit_pk PRIMARY KEY ( exhibit_id );
+ALTER TABLE Exhibit ADD CONSTRAINT Exhibit_pk PRIMARY KEY ( X_id );
 
 CREATE TABLE item (
-    itemcomments           VARCHAR2(60),
-    itemcondition          VARCHAR2(30),
-    itemdimensions         VARCHAR2(30),
-    itemdonatedby          VARCHAR2(25),
-    itemid                 VARCHAR2(10),
-    itemlocation           VARCHAR2(25),
-    itemname               VARCHAR2(25),
-    itemregistaredby       VARCHAR2(25),
-    itemtimeperiod         VARCHAR2(25),
-    itemvalue              VARCHAR2(15),
-    itempicture            ordsys.ordimage,
-    itemsequence           INTEGER,
-    donator_donator_id     NUMBER NOT NULL,
-    museum_museum_id       NUMBER NOT NULL,
-    appraiser_appraiser_id NUMBER NOT NULL,
-    exhibit_exhibit_id     NUMBER NOT NULL
+    IComments              VARCHAR2(60),
+    ICondition             VARCHAR2(30),
+    IDimensions            VARCHAR2(30),
+    IDonatedby             VARCHAR2(25),
+    I_id                   VARCHAR2(10),
+    ILocation              VARCHAR2(25),
+    IName                  VARCHAR2(25),
+    IRegistaredby          VARCHAR2(25),
+    ITimePeriod            VARCHAR2(25),
+    IValue                 VARCHAR2(15),
+    IPicture               ordsys.ordimage,
+    ISequence              INTEGER,
+    D_id                   NUMBER NOT NULL,
+    M_id                   NUMBER NOT NULL,
+    A_id                   NUMBER NOT NULL,
+    X_id                   NUMBER NOT NULL
 );
 
-CREATE TABLE museum (
-    museumadress  VARCHAR2(40),
-    museumname    VARCHAR2(25),
-    museumphone   VARCHAR2(15),
-    museumpicture ordsys.ordimage,
-    museum_id     NUMBER NOT NULL
+
+CREATE TABLE Museum (
+    MAdress  VARCHAR2(40),
+    MName    VARCHAR2(25),
+    MPhone   VARCHAR2(15),
+    MPicture ordsys.ordimage,
+    M_id     NUMBER NOT NULL
 );
 
-ALTER TABLE museum ADD CONSTRAINT museum_pk PRIMARY KEY ( museum_id );
+ALTER TABLE Museum ADD CONSTRAINT Museum_pk PRIMARY KEY ( M_id );
 
-CREATE TABLE volunteer (
-    volunteername    VARCHAR2(25),
-    volunteerphone   VARCHAR2(11),
-    museum_museum_id NUMBER NOT NULL
+CREATE TABLE Volunteer (
+    VName    VARCHAR2(25),
+    VPhone   VARCHAR2(11),
+    M_id NUMBER NOT NULL
 );
 
-ALTER TABLE appraiser
-    ADD CONSTRAINT appraiser_museum_fk FOREIGN KEY ( museum_museum_id )
-        REFERENCES museum ( museum_id );
+ALTER TABLE Appraiser
+    ADD CONSTRAINT Appraiser_Museum_fk FOREIGN KEY ( M_id )
+        REFERENCES Museum ( M_id );
 
-ALTER TABLE donator
-    ADD CONSTRAINT donator_museum_fk FOREIGN KEY ( museum_museum_id )
-        REFERENCES museum ( museum_id );
+ALTER TABLE Donator
+    ADD CONSTRAINT Donator_Museum_fk FOREIGN KEY ( M_id )
+        REFERENCES Museum ( M_id );
 
-ALTER TABLE employee
-    ADD CONSTRAINT employee_museum_fk FOREIGN KEY ( museum_museum_id )
-        REFERENCES museum ( museum_id );
+ALTER TABLE Employee
+    ADD CONSTRAINT Employee_Museum_fk FOREIGN KEY ( M_id )
+        REFERENCES Museum ( M_id );
 
-ALTER TABLE exhibit
-    ADD CONSTRAINT exhibit_museum_fk FOREIGN KEY ( museum_museum_id )
-        REFERENCES museum ( museum_id );
+ALTER TABLE Exhibit
+    ADD CONSTRAINT Exhibit_Museum_fk FOREIGN KEY ( M_id )
+        REFERENCES Museum ( M_id );
 
-ALTER TABLE item
-    ADD CONSTRAINT item_appraiser_fk FOREIGN KEY ( appraiser_appraiser_id )
-        REFERENCES appraiser ( appraiser_id );
+ALTER TABLE Item
+    ADD CONSTRAINT Item_Appraiser_fk FOREIGN KEY ( A_id )
+        REFERENCES Appraiser ( A_id );
 
-ALTER TABLE item
-    ADD CONSTRAINT item_donator_fk FOREIGN KEY ( donator_donator_id )
-        REFERENCES donator ( donator_id );
+ALTER TABLE Item
+    ADD CONSTRAINT Item_Donator_fk FOREIGN KEY ( D_id )
+        REFERENCES Donator ( D_id );
 
-ALTER TABLE item
-    ADD CONSTRAINT item_exhibit_fk FOREIGN KEY ( exhibit_exhibit_id )
-        REFERENCES exhibit ( exhibit_id );
+ALTER TABLE Item
+    ADD CONSTRAINT Item_Exhibit_fk FOREIGN KEY ( X_id )
+        REFERENCES Exhibit ( X_id );
 
-ALTER TABLE item
-    ADD CONSTRAINT item_museum_fk FOREIGN KEY ( museum_museum_id )
-        REFERENCES museum ( museum_id );
+ALTER TABLE Item
+    ADD CONSTRAINT Item_Museum_fk FOREIGN KEY ( M_id )
+        REFERENCES Museum ( M_id );
 
-ALTER TABLE volunteer
-    ADD CONSTRAINT volunteer_museum_fk FOREIGN KEY ( museum_museum_id )
-        REFERENCES museum ( museum_id );
+ALTER TABLE Volunteer
+    ADD CONSTRAINT Volunteer_Museum_fk FOREIGN KEY ( M_id )
+        REFERENCES Museum ( M_id );
 
-CREATE SEQUENCE appraiser_appraiser_id_seq START WITH 1 NOCACHE ORDER;
+CREATE SEQUENCE A_id_seq START WITH 1 NOCACHE ORDER;
 
-CREATE OR REPLACE TRIGGER appraiser_appraiser_id_trg BEFORE
-    INSERT ON appraiser
+CREATE OR REPLACE TRIGGER A_id_trg BEFORE
+    INSERT ON Appraiser
     FOR EACH ROW
-    WHEN ( new.appraiser_id IS NULL )
+    WHEN ( new.A_id IS NULL )
 BEGIN
-    :new.appraiser_id := appraiser_appraiser_id_seq.nextval;
+    :new.A_id := A_id_seq.nextval;
 END;
 /
 
-CREATE SEQUENCE donator_donator_id_seq START WITH 1 NOCACHE ORDER;
+CREATE SEQUENCE D_id_seq START WITH 1 NOCACHE ORDER;
 
-CREATE OR REPLACE TRIGGER donator_donator_id_trg BEFORE
-    INSERT ON donator
+CREATE OR REPLACE TRIGGER D_id_trg BEFORE
+    INSERT ON Donator
     FOR EACH ROW
     WHEN ( new.donator_id IS NULL )
 BEGIN
-    :new.donator_id := donator_donator_id_seq.nextval;
+    :new.D_id := D_id_seq.nextval;
 END;
 /
 
-CREATE SEQUENCE exhibit_exhibit_id_seq START WITH 1 NOCACHE ORDER;
+CREATE SEQUENCE X_id_seq START WITH 1 NOCACHE ORDER;
 
-CREATE OR REPLACE TRIGGER exhibit_exhibit_id_trg BEFORE
-    INSERT ON exhibit
+CREATE OR REPLACE TRIGGER X_id_trg BEFORE
+    INSERT ON Exhibit
     FOR EACH ROW
-    WHEN ( new.exhibit_id IS NULL )
+    WHEN ( new.X_id IS NULL )
 BEGIN
-    :new.exhibit_id := exhibit_exhibit_id_seq.nextval;
+    :new.X_id := X_id_seq.nextval;
 END;
 /
 
-CREATE SEQUENCE museum_museum_id_seq START WITH 1 NOCACHE ORDER;
+CREATE SEQUENCE M_id_seq START WITH 1 NOCACHE ORDER;
 
-CREATE OR REPLACE TRIGGER museum_museum_id_trg BEFORE
-    INSERT ON museum
+CREATE OR REPLACE TRIGGER M_id_trg BEFORE
+    INSERT ON Museum
     FOR EACH ROW
-    WHEN ( new.museum_id IS NULL )
+    WHEN ( new.M_id IS NULL )
 BEGIN
-    :new.museum_id := museum_museum_id_seq.nextval;
+    :new.M_id := M_id_seq.nextval;
 END;
 /
 
