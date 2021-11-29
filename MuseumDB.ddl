@@ -164,6 +164,32 @@ BEGIN
 END;
 /
 
+ 'code to join tables with common variables'
+SELECT IID, DName, AName, XName
+FROM item, donator, appraiser,exhibit
+WHERE DName.item=DName.donator
+AND AName.item=AName.appraiser
+AND XName.item=XName.exhibit
+AND XName IS NOT NULL;
+
+'code to add the collect value of items in the museum'
+SELECT MName, SUM(IValue) AS total_value
+FROM museum, Item;
+
+'Nested Subquery to find the highest value item in the museum'
+SELECT MAX(IValue)
+FROM item
+AND item.ILocation=
+(SELECT ILocation
+FROM item
+WHERE IValue = MAX(IValue)
+AND XLocation.exhibit=
+(SELECT XLocation
+FROM exhibit
+WHERE IValue=MAX(IValue));
+
+
+
 
 
 -- Oracle SQL Developer Data Modeler Summary Report: 
