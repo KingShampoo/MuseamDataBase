@@ -164,18 +164,18 @@ BEGIN
 END;
 /
 
-INSERT INTO Museum VALUES ('2245 S. County Rd,25A, Troy,Ohio,45373', 'Miami Valley Veterans Museum','(937) 332-8852','',1);
-INSERT INTO Exhibit VALUES ('Sep 1, 1939', 'Sep 2, 1945', 'WWII','SouthEast corner');
-INSERT INTO Employee VALUES ('samkondall@gmail.com', 'Sam Kondall', '(937) 332-8852',NULL,0)
-INSERT INTO Donator VALUES ('Harry Wray','(937)335-6242','533 Mulberry St')
-INSERT INTO Volunteer VALUES ('Betsy Kondall','(937)369-4086',0)
-INSERT INTO Appraiser VALUES ('Terry Purke','(937)321-9651','WWI and WWII',0,1)
+INSERT INTO Museum VALUES ('2245 S. County Rd,25A, Troy,Ohio,45373', 'Miami Valley Veterans Museum','(937) 332-8852',NULL,1);
+INSERT INTO Exhibit VALUES ('Sep 1, 1939', 'Sep 2, 1945', 'WWII Exhibit','SouthEast corner',1,1);
+INSERT INTO Employee VALUES ('samkondall@gmail.com', 'Sam Kondall', '(937) 332-8852','none',1)
+INSERT INTO Donator VALUES ('Harry Wray','(937)335-6242','533 Mulberry St',1,1)
+INSERT INTO Volunteer VALUES ('Betsy Kondall','(937)369-4086',1)
+INSERT INTO Appraiser VALUES ('Terry Purke','(937)321-9651','WWI and WWII',1,1)
 
-INSERT INTO Item VALUES('OD Enlisted Mens Service Hat with Brass EM emblem.Gtap, bull and lining intact.','good, stained', '1.5x2','Harry Wray',0,'on display','Service Hat','Sam Kondall','WWII',"$40",NULL,0,)
-INSERT INTO Item VALUES('OD Overcoat','Excellent','36R','Harry Wray',1,'on display','OD Overcoat','Sam Kondall', 'WWII','',NULL,1)
-INSERT INTO Item VALUES('Overseas Cap with infantry Lt blue braid, tan (khaki) Cotton.','good','Size 6 7/8','Harry Wray',2,'on display','Overseas Cap -Cotton','Sam Kondall', 'WWII','',NULL,2)
-INSERT INTO Item VALUES('Wool overseas cap with armored red/gold braid.','very good ','10 1/2 x 5 "','Harry Wray',3,'on display','Overseas Cap -Wool','Sam Kondall', 'WWII','',NULL,3)
-INSERT INTO Item VALUES('od Green Medical Utility Bag with waist ties','Good','13 3/4" X 13"','Harry Wray',4,'on display','Utility Medical Bag','Sam Kondall', 'WWII','',NULL,4)
+INSERT INTO Item VALUES('OD Enlisted Mens Service Hat with Brass EM emblem.Gtap, bull and lining intact.','good, stained', '1.5x2','Harry Wray',0,'on display','Service Hat','Sam Kondall','WWII',"$40",NULL,0,1,1,1,1)
+INSERT INTO Item VALUES('OD Overcoat','Excellent','36R','Harry Wray',1,'on display','OD Overcoat','Sam Kondall', 'WWII','',NULL,1,1,1,1,1)
+INSERT INTO Item VALUES('Overseas Cap with infantry Lt blue braid, tan (khaki) Cotton.','good','Size 6 7/8','Harry Wray',2,'on display','Overseas Cap -Cotton','Sam Kondall', 'WWII','',NULL,2,1,1,1,1)
+INSERT INTO Item VALUES('Wool overseas cap with armored red/gold braid.','very good ','10 1/2 x 5 "','Harry Wray',3,'on display','Overseas Cap -Wool','Sam Kondall', 'WWII','',NULL,3,1,1,1,1)
+INSERT INTO Item VALUES('od Green Medical Utility Bag with waist ties','Good','13 3/4" X 13"','Harry Wray',4,'on display','Utility Medical Bag','Sam Kondall', 'WWII','',NULL,4,1,1,1,1)
 
  'code to join tables with common variables'
 SELECT IID, DName, AName, XName
