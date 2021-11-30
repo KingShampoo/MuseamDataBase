@@ -8,6 +8,18 @@
 -- predefined type, no DDL - MDSYS.SDO_GEOMETRY
 
 -- predefined type, no DDL - XMLTYPE
+DROP  TABLE Appraiser CASCADE CONSTRAINTS;
+DROP  TABLE Donator CASCADE CONSTRAINTS;
+DROP  TABLE Employee CASCADE CONSTRAINTS;
+DROP  TABLE Exhibit CASCADE CONSTRAINTS;
+DROP  TABLE item CASCADE CONSTRAINTS;
+DROP  TABLE Museum CASCADE CONSTRAINTS;
+DROP  TABLE Volunteer CASCADE CONSTRAINTS;
+
+
+
+
+
 
 CREATE TABLE Appraiser (
     AName      VARCHAR2(25),
@@ -178,16 +190,16 @@ INSERT INTO Item VALUES('Wool overseas cap with armored red/gold braid.','very g
 INSERT INTO Item VALUES('od Green Medical Utility Bag with waist ties','Good','13 3/4" X 13"','Harry Wray',4,'on display','Utility Medical Bag','Sam Kondall', 'WWII','',NULL,4,1,1,1,1)
 
  'code to join tables with common variables'
-SELECT IID, DName, AName, XName
-FROM item, donator, appraiser,exhibit
-WHERE DName.item=DName.donator
-AND AName.item=AName.appraiser
-AND XName.item=XName.exhibit
+SELECT I_ID, DName, AName, XName
+FROM item, Donator, Appraiser,Exhibit
+WHERE DName.item=DName.Donator
+AND AName.item=AName.Appraiser
+AND XName.item=XName.Exhibit
 AND XName IS NOT NULL;
 
 'code to add the collect value of items in the museum'
 SELECT MName, SUM(IValue) AS total_value
-FROM museum, Item;
+FROM Museum, item;
 
 'Nested Subquery to find the highest value item in the museum'
 SELECT MAX(IValue)
@@ -198,7 +210,7 @@ FROM item
 WHERE IValue = MAX(IValue)
 AND XLocation.exhibit=
 (SELECT XLocation
-FROM exhibit
+FROM Exhibit
 WHERE IValue=MAX(IValue));
 
 
